@@ -11,6 +11,7 @@ public class Highlight
     
     [Required]
     [MaxLength(500, ErrorMessage = "The color is too long")]
+    [Column(TypeName = "TEXT")]
     public string Color { get; set; }
     
     [Required]

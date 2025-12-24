@@ -10,6 +10,7 @@ public class Bookmark
     public Guid BookmarkId { get; set; }
     
     [Required]
+    [Column(TypeName = "TEXT")]
     [MaxLength(5000, ErrorMessage = "The name is too long")]
     public string Name { get; set; }
     

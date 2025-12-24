@@ -12,6 +12,8 @@ public class Book
     [Required]
     [MinLength(2, ErrorMessage = "The book title is too short")]
     [MaxLength(2000, ErrorMessage = "The book title is too long")]
+    [Column(TypeName = "TEXT")]
+
     public string Title { get; set; }
     
     [Required]
@@ -28,6 +30,7 @@ public class Book
     public string Format { get; set; }
     
     [MaxLength(500, ErrorMessage = "The extension is too long")]
+    [Column(TypeName = "TEXT")]
     public string Extension { get; set; }
     
     [MinLength(2, ErrorMessage = "The language is too short")]
@@ -42,12 +45,15 @@ public class Book
     [Required]
     [MinLength(2, ErrorMessage = "The pages size is too short")]
     [MaxLength(600, ErrorMessage = "The pages size is too long")]
+    [Column(TypeName = "TEXT")]
     public string PagesSize { get; set; }
     
     [MaxLength(2000, ErrorMessage = "The creator is too long")]
+    [Column(TypeName = "TEXT")]
     public string Creator { get; set; }
     
     [MaxLength(2000, ErrorMessage = "The authors are too long")]
+    [Column(TypeName = "TEXT")]
     public string Authors { get; set; }
 
     [MaxLength(140, ErrorMessage = "The creation date is too long")]

@@ -11,6 +11,7 @@ public class Tag
     
     [MinLength(1, ErrorMessage = "The tag name is too short")]
     [MaxLength(5000, ErrorMessage = "The tag name is too long")]
+    [Column(TypeName = "TEXT")]
     public string Name { get; set; }
 
     [Required]
