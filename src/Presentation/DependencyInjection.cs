@@ -91,7 +91,7 @@ public static class DependencyInjection
             
 			// If not self-hosted, use MSSQL
 			if (configuration["LIBRUM_SELFHOSTED"] != "true"){
-            	options.UseSqlServer(connectionString);
+            	options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 			}
             // Else use MySql
 			else
